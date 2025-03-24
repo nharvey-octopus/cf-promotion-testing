@@ -10,4 +10,3 @@ spec:
           operator: In
           values:
             - '*[GitOps] Update image tag to vPR-*'
-  concurrency: queue
