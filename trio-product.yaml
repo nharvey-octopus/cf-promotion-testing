@@ -1,0 +1,13 @@
+apiVersion: codefresh.io/v1beta2
+kind: Product
+metadata:
+  name: helloworld2
+spec:
+  promotionFlows:
+    - name: staging-production
+      gitTriggerSelectors:
+        - key: commitMessage
+          operator: In
+          values:
+            - '*[GitOps] Update image tag to vPR-*'
+  concurrency: queue
